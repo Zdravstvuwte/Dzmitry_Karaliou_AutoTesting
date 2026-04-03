@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="f372a2d8-b94e-446e-8948-89fcbec418f3" name="dk466@LAPTOP-DUOIV9LL 2026-04-03 21:28:02" runUser="LAPTOP-DUOIV9LL\dk466" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-04-03T21:28:02.5020896+03:00" queuing="2026-04-03T21:28:02.5020908+03:00" start="2026-04-03T21:27:34.5030444+03:00" finish="2026-04-03T21:29:03.7020700+03:00" />
+  <TestSettings name="default" id="53de6d66-ac65-40eb-8f42-1e019031894c">
+    <Deployment runDeploymentRoot="dk466_LAPTOP-DUOIV9LL_2026-04-03_21_28_02" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="bac3666a-f70f-4606-b6b1-b5ad1706a720" testId="134a2a4b-9b52-b7ea-81f3-de7a224d1b3e" testName="AboutPage_ShouldOpen_WhenUserClicksAboutTab" computerName="LAPTOP-DUOIV9LL" duration="00:01:22.2667500" startTime="2026-04-03T21:27:36.4315905+03:00" endTime="2026-04-03T21:28:58.6983400+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bac3666a-f70f-4606-b6b1-b5ad1706a720">
+      <Output>
+        <ErrorInfo>
+          <Message>OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:64566/session/bd60e38d6c70065e3bc36e1a44a4cc14/url timed out after 60 seconds.&#xD;
+  ----&gt; System.Threading.Tasks.TaskCanceledException : The request was canceled due to the configured HttpClient.Timeout of 60 seconds elapsing.&#xD;
+  ----&gt; System.TimeoutException : The operation was canceled.&#xD;
+  ----&gt; System.Threading.Tasks.TaskCanceledException : The operation was canceled.&#xD;
+  ----&gt; System.IO.IOException : Unable to read data from the transport connection: Операция ввода/вывода была прервана из-за завершения потока команд или по запросу приложения..&#xD;
+  ----&gt; System.Net.Sockets.SocketException : Операция ввода/вывода была прервана из-за завершения потока команд или по запросу приложения.</Message>
+          <StackTrace>   at OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(Command commandToExecute)&#xD;
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.ExecuteAsync(Command commandToExecute)&#xD;
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)&#xD;
+   at OpenQA.Selenium.Navigator.GoToUrlAsync(String url)&#xD;
+   at OpenQA.Selenium.Navigator.&lt;&gt;c__DisplayClass6_0.&lt;&lt;GoToUrl&gt;b__0&gt;d.MoveNext()&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at OpenQA.Selenium.Navigator.GoToUrl(String url)&#xD;
+   at WebUIAutomation.Tests.AboutPageNavigationTests.AboutPage_ShouldOpen_WhenUserClicksAboutTab() in C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.NUnit\AboutPageNavigationTests.cs:line 13&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+--TaskCanceledException&#xD;
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)&#xD;
+   at System.Net.Http.HttpClient.&lt;SendAsync&gt;g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)&#xD;
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)&#xD;
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(Command commandToExecute)&#xD;
+--TimeoutException&#xD;
+&#xD;
+--TaskCanceledException&#xD;
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)&#xD;
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.DiagnosticsHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.HttpClient.&lt;SendAsync&gt;g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)&#xD;
+--IOException&#xD;
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)&#xD;
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource&lt;System.Int32&gt;.GetResult(Int16 token)&#xD;
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)&#xD;
+--SocketException&#xD;
+
+1)    at OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(Command commandToExecute)&#xD;
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.ExecuteAsync(Command commandToExecute)&#xD;
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)&#xD;
+   at OpenQA.Selenium.Navigator.GoToUrlAsync(String url)&#xD;
+   at OpenQA.Selenium.Navigator.&lt;&gt;c__DisplayClass6_0.&lt;&lt;GoToUrl&gt;b__0&gt;d.MoveNext()&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at OpenQA.Selenium.Navigator.GoToUrl(String url)&#xD;
+   at WebUIAutomation.Tests.AboutPageNavigationTests.AboutPage_ShouldOpen_WhenUserClicksAboutTab() in C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.NUnit\AboutPageNavigationTests.cs:line 13&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+--TaskCanceledException&#xD;
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)&#xD;
+   at System.Net.Http.HttpClient.&lt;SendAsync&gt;g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)&#xD;
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)&#xD;
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(Command commandToExecute)&#xD;
+--TimeoutException&#xD;
+&#xD;
+--TaskCanceledException&#xD;
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)&#xD;
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.DiagnosticsHttpHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.HttpClient.&lt;SendAsync&gt;g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)&#xD;
+--IOException&#xD;
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)&#xD;
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource&lt;System.Int32&gt;.GetResult(Int16 token)&#xD;
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)&#xD;
+--SocketException&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d0b4517d-f190-4dcb-8b37-9ba943ec78c1" testId="bf822a1a-f77a-edff-4598-081d8ff4b024" testName="Page_ShouldLoad_AndTitleContains(contacts, title-fragment)" computerName="LAPTOP-DUOIV9LL" duration="00:00:06.6448340" startTime="2026-04-03T21:28:56.9544738+03:00" endTime="2026-04-03T21:29:03.5993073+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d0b4517d-f190-4dcb-8b37-9ba943ec78c1" />
+    <UnitTestResult executionId="dbdfbdd5-d3dc-4edf-b35e-d660560df4fe" testId="95a4866e-fdca-82eb-1d72-f7f3f6b20faf" testName="Page_ShouldLoad_AndTitleContains(about, title-fragment)" computerName="LAPTOP-DUOIV9LL" duration="00:00:13.3725960" startTime="2026-04-03T21:28:43.5818212+03:00" endTime="2026-04-03T21:28:56.9544164+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dbdfbdd5-d3dc-4edf-b35e-d660560df4fe" />
+    <UnitTestResult executionId="fe0974c7-f6ec-4441-b4a7-5160ef8415ea" testId="84a665a9-bf30-0ccb-c321-008cbaeb606d" testName="Page_ShouldLoad_AndTitleContains(home, title-fragment)" computerName="LAPTOP-DUOIV9LL" duration="00:01:07.1500270" startTime="2026-04-03T21:27:36.4316444+03:00" endTime="2026-04-03T21:28:43.5816704+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe0974c7-f6ec-4441-b4a7-5160ef8415ea">
+      <Output>
+        <ErrorInfo>
+          <Message>  Assert.That(Driver.Title, Does.Contain(titleFragment).IgnoreCase)&#xD;
+  Expected: String containing "EHU", ignoring case&#xD;
+  But was:  "European Humanities University"&#xD;
+</Message>
+          <StackTrace>   at WebUIAutomation.Tests.HomePageParameterizedTests.Page_ShouldLoad_AndTitleContains(String url, String titleFragment) in C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.NUnit\HomePageParameterizedTests.cs:line 36&#xD;
+
+1)    at WebUIAutomation.Tests.HomePageParameterizedTests.Page_ShouldLoad_AndTitleContains(String url, String titleFragment) in C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.NUnit\HomePageParameterizedTests.cs:line 36&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0a8f0e4c-d150-486d-b9ed-42e72691da61" testId="b149aefb-e0dd-7319-b278-ba20b1204e86" testName="ContactsPage_ShouldShowEmailAndPhone_ForUniversityInquiries" computerName="LAPTOP-DUOIV9LL" duration="00:00:25.5931820" startTime="2026-04-03T21:27:36.4315789+03:00" endTime="2026-04-03T21:28:02.0245609+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0a8f0e4c-d150-486d-b9ed-42e72691da61" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Page_ShouldLoad_AndTitleContains(contacts, title-fragment)" storage="c:\2_sdc\2026 hr s4 autotesting cs\dzmitry_karaliou_test_runners\web ui automation.nunit\bin\release\net9.0\web ui automation.nunit.dll" id="bf822a1a-f77a-edff-4598-081d8ff4b024">
+      <Execution id="d0b4517d-f190-4dcb-8b37-9ba943ec78c1" />
+      <TestMethod codeBase="C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.NUnit\bin\Release\net9.0\Web UI Automation.NUnit.dll" adapterTypeName="executor://nunit3testexecutor/" className="WebUIAutomation.Tests.HomePageParameterizedTests" name="Page_ShouldLoad_AndTitleContains(contacts, title-fragment)" />
+    </UnitTest>
+    <UnitTest name="ContactsPage_ShouldShowEmailAndPhone_ForUniversityInquiries" storage="c:\2_sdc\2026 hr s4 autotesting cs\dzmitry_karaliou_test_runners\web ui automation.nunit\bin\release\net9.0\web ui automation.nunit.dll" id="b149aefb-e0dd-7319-b278-ba20b1204e86">
+      <Execution id="0a8f0e4c-d150-486d-b9ed-42e72691da61" />
+      <TestMethod codeBase="C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.NUnit\bin\Release\net9.0\Web UI Automation.NUnit.dll" adapterTypeName="executor://nunit3testexecutor/" className="WebUIAutomation.Tests.ContactPageTests" name="ContactsPage_ShouldShowEmailAndPhone_ForUniversityInquiries" />
+    </UnitTest>
+    <UnitTest name="Page_ShouldLoad_AndTitleContains(home, title-fragment)" storage="c:\2_sdc\2026 hr s4 autotesting cs\dzmitry_karaliou_test_runners\web ui automation.nunit\bin\release\net9.0\web ui automation.nunit.dll" id="84a665a9-bf30-0ccb-c321-008cbaeb606d">
+      <Execution id="fe0974c7-f6ec-4441-b4a7-5160ef8415ea" />
+      <TestMethod codeBase="C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.NUnit\bin\Release\net9.0\Web UI Automation.NUnit.dll" adapterTypeName="executor://nunit3testexecutor/" className="WebUIAutomation.Tests.HomePageParameterizedTests" name="Page_ShouldLoad_AndTitleContains(home, title-fragment)" />
+    </UnitTest>
+    <UnitTest name="Page_ShouldLoad_AndTitleContains(about, title-fragment)" storage="c:\2_sdc\2026 hr s4 autotesting cs\dzmitry_karaliou_test_runners\web ui automation.nunit\bin\release\net9.0\web ui automation.nunit.dll" id="95a4866e-fdca-82eb-1d72-f7f3f6b20faf">
+      <Execution id="dbdfbdd5-d3dc-4edf-b35e-d660560df4fe" />
+      <TestMethod codeBase="C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.NUnit\bin\Release\net9.0\Web UI Automation.NUnit.dll" adapterTypeName="executor://nunit3testexecutor/" className="WebUIAutomation.Tests.HomePageParameterizedTests" name="Page_ShouldLoad_AndTitleContains(about, title-fragment)" />
+    </UnitTest>
+    <UnitTest name="AboutPage_ShouldOpen_WhenUserClicksAboutTab" storage="c:\2_sdc\2026 hr s4 autotesting cs\dzmitry_karaliou_test_runners\web ui automation.nunit\bin\release\net9.0\web ui automation.nunit.dll" id="134a2a4b-9b52-b7ea-81f3-de7a224d1b3e">
+      <Execution id="bac3666a-f70f-4606-b6b1-b5ad1706a720" />
+      <TestMethod codeBase="C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.NUnit\bin\Release\net9.0\Web UI Automation.NUnit.dll" adapterTypeName="executor://nunit3testexecutor/" className="WebUIAutomation.Tests.AboutPageNavigationTests" name="AboutPage_ShouldOpen_WhenUserClicksAboutTab" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="134a2a4b-9b52-b7ea-81f3-de7a224d1b3e" executionId="bac3666a-f70f-4606-b6b1-b5ad1706a720" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bf822a1a-f77a-edff-4598-081d8ff4b024" executionId="d0b4517d-f190-4dcb-8b37-9ba943ec78c1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="95a4866e-fdca-82eb-1d72-f7f3f6b20faf" executionId="dbdfbdd5-d3dc-4edf-b35e-d660560df4fe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="84a665a9-bf30-0ccb-c321-008cbaeb606d" executionId="fe0974c7-f6ec-4441-b4a7-5160ef8415ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b149aefb-e0dd-7319-b278-ba20b1204e86" executionId="0a8f0e4c-d150-486d-b9ed-42e72691da61" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Список результатов" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Все загруженные результаты" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="5" executed="5" passed="3" failed="2" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 1.0.0.0: Test execution started&#xD;
+Running selected tests in C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.NUnit\bin\Release\net9.0\Web UI Automation.NUnit.dll&#xD;
+   NUnit3TestExecutor discovered 5 of 5 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

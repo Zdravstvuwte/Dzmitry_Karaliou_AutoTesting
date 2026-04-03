@@ -1,0 +1,10 @@
+Task requirements and conditions
+1. Use tests developed from task #3 (Web Ul automation) as a source. You can modify or update your tests based on your needs.
+2. Create 2 different projects (NUnit and xUnit based).
+3. Implement several features for BOTH runner types:
+	a. Test parallelization.
+	b. Test setup/tear down.
+	c. Data provider.
+	d. Category.
+4. As a result, provide artifacts to compare the work of 2 runners.
+5. Make your own decision witch runner type is more convenient to you.

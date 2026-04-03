@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="ce851d2f-95e8-49c6-840b-b75e30861b09" name="dk466@LAPTOP-DUOIV9LL 2026-04-03 21:31:27" runUser="LAPTOP-DUOIV9LL\dk466" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-04-03T21:31:27.5292731+03:00" queuing="2026-04-03T21:31:27.5292735+03:00" start="2026-04-03T21:31:25.3228181+03:00" finish="2026-04-03T21:32:44.7491853+03:00" />
+  <TestSettings name="default" id="19a75e87-47ba-4c66-ae0d-7f3b51c6b5eb">
+    <Deployment runDeploymentRoot="dk466_LAPTOP-DUOIV9LL_2026-04-03_21_31_27" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="faf74110-ae55-4fdd-a0c5-b3a0dbe6dadf" testId="600f7b5e-3d00-d3f8-13f7-8456d53c161e" testName="WebUIAutomation.Tests.HomePageTheoryTests.Page_ShouldLoad_AndTitleContains(url: &quot;https://en.ehu.lt/contacts/&quot;, titleFragment: &quot;Contact&quot;)" computerName="LAPTOP-DUOIV9LL" duration="00:00:10.9853228" startTime="2026-04-03T21:32:21.4364532+03:00" endTime="2026-04-03T21:32:32.4161560+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="faf74110-ae55-4fdd-a0c5-b3a0dbe6dadf" />
+    <UnitTestResult executionId="43283f95-6afc-4fa6-a696-5f04c220f05a" testId="3f65d9be-4367-2583-fe41-7643dc8e9ba1" testName="WebUIAutomation.Tests.ContactPageTests.ContactsPage_ShouldShowEmailAndPhone_ForUniversityInquiries" computerName="LAPTOP-DUOIV9LL" duration="00:00:12.7714205" startTime="2026-04-03T21:31:26.4969358+03:00" endTime="2026-04-03T21:31:39.2696261+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="43283f95-6afc-4fa6-a696-5f04c220f05a" />
+    <UnitTestResult executionId="6a3b474f-d205-4ec0-ade9-e11616321fb3" testId="1f8444fa-3cb1-692f-67e8-7feac9935886" testName="WebUIAutomation.Tests.SuiteLifecycleTests.SuiteHooks_AreInitialized" computerName="LAPTOP-DUOIV9LL" duration="00:00:00.2987459" startTime="2026-04-03T21:31:26.4970663+03:00" endTime="2026-04-03T21:31:26.7999238+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6a3b474f-d205-4ec0-ade9-e11616321fb3" />
+    <UnitTestResult executionId="166ad3b9-a184-440b-baab-1a23ae7e3542" testId="f360abe7-6f30-53dd-27d8-77813c2a43bf" testName="WebUIAutomation.Tests.HomePageTheoryTests.Page_ShouldLoad_AndTitleContains(url: &quot;https://en.ehu.lt/about/&quot;, titleFragment: &quot;About&quot;)" computerName="LAPTOP-DUOIV9LL" duration="00:00:12.2705964" startTime="2026-04-03T21:32:32.4168657+03:00" endTime="2026-04-03T21:32:44.6870029+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="166ad3b9-a184-440b-baab-1a23ae7e3542" />
+    <UnitTestResult executionId="ce280fd5-1634-4e3e-8be1-185312f34b3d" testId="b5dd0cb5-8426-a138-8525-c0f48901d66d" testName="WebUIAutomation.Tests.HomePageTheoryTests.Page_ShouldLoad_AndTitleContains(url: &quot;https://en.ehu.lt/&quot;, titleFragment: &quot;EHU&quot;)" computerName="LAPTOP-DUOIV9LL" duration="00:00:54.9257601" startTime="2026-04-03T21:31:26.4970331+03:00" endTime="2026-04-03T21:32:21.4308948+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ce280fd5-1634-4e3e-8be1-185312f34b3d">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Contains() Failure: Sub-string not found&#xD;
+String:    "European Humanities University"&#xD;
+Not found: "EHU"</Message>
+          <StackTrace>   at WebUIAutomation.Tests.HomePageTheoryTests.Page_ShouldLoad_AndTitleContains(String url, String titleFragment) in C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.xUnit\HomePageTheoryTests.cs:line 50&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c86c5d56-b76b-421c-b6a7-4b5a942b3a79" testId="d845e996-6714-cfce-24b1-1bd4228fb760" testName="WebUIAutomation.Tests.AboutPageNavigationTests.AboutPage_ShouldOpen_WhenUserClicksAboutTab" computerName="LAPTOP-DUOIV9LL" duration="00:00:56.6572672" startTime="2026-04-03T21:31:26.4953530+03:00" endTime="2026-04-03T21:32:23.1552860+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c86c5d56-b76b-421c-b6a7-4b5a942b3a79" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="WebUIAutomation.Tests.SuiteLifecycleTests.SuiteHooks_AreInitialized" storage="c:\2_sdc\2026 hr s4 autotesting cs\dzmitry_karaliou_test_runners\web ui automation.xunit\bin\release\net9.0\web ui automation.xunit.dll" id="1f8444fa-3cb1-692f-67e8-7feac9935886">
+      <Execution id="6a3b474f-d205-4ec0-ade9-e11616321fb3" />
+      <TestMethod codeBase="C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.xUnit\bin\Release\net9.0\Web UI Automation.xUnit.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WebUIAutomation.Tests.SuiteLifecycleTests" name="SuiteHooks_AreInitialized" />
+    </UnitTest>
+    <UnitTest name="WebUIAutomation.Tests.HomePageTheoryTests.Page_ShouldLoad_AndTitleContains(url: &quot;https://en.ehu.lt/contacts/&quot;, titleFragment: &quot;Contact&quot;)" storage="c:\2_sdc\2026 hr s4 autotesting cs\dzmitry_karaliou_test_runners\web ui automation.xunit\bin\release\net9.0\web ui automation.xunit.dll" id="600f7b5e-3d00-d3f8-13f7-8456d53c161e">
+      <Execution id="faf74110-ae55-4fdd-a0c5-b3a0dbe6dadf" />
+      <TestMethod codeBase="C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.xUnit\bin\Release\net9.0\Web UI Automation.xUnit.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WebUIAutomation.Tests.HomePageTheoryTests" name="Page_ShouldLoad_AndTitleContains" />
+    </UnitTest>
+    <UnitTest name="WebUIAutomation.Tests.HomePageTheoryTests.Page_ShouldLoad_AndTitleContains(url: &quot;https://en.ehu.lt/about/&quot;, titleFragment: &quot;About&quot;)" storage="c:\2_sdc\2026 hr s4 autotesting cs\dzmitry_karaliou_test_runners\web ui automation.xunit\bin\release\net9.0\web ui automation.xunit.dll" id="f360abe7-6f30-53dd-27d8-77813c2a43bf">
+      <Execution id="166ad3b9-a184-440b-baab-1a23ae7e3542" />
+      <TestMethod codeBase="C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.xUnit\bin\Release\net9.0\Web UI Automation.xUnit.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WebUIAutomation.Tests.HomePageTheoryTests" name="Page_ShouldLoad_AndTitleContains" />
+    </UnitTest>
+    <UnitTest name="WebUIAutomation.Tests.HomePageTheoryTests.Page_ShouldLoad_AndTitleContains(url: &quot;https://en.ehu.lt/&quot;, titleFragment: &quot;EHU&quot;)" storage="c:\2_sdc\2026 hr s4 autotesting cs\dzmitry_karaliou_test_runners\web ui automation.xunit\bin\release\net9.0\web ui automation.xunit.dll" id="b5dd0cb5-8426-a138-8525-c0f48901d66d">
+      <Execution id="ce280fd5-1634-4e3e-8be1-185312f34b3d" />
+      <TestMethod codeBase="C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.xUnit\bin\Release\net9.0\Web UI Automation.xUnit.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WebUIAutomation.Tests.HomePageTheoryTests" name="Page_ShouldLoad_AndTitleContains" />
+    </UnitTest>
+    <UnitTest name="WebUIAutomation.Tests.ContactPageTests.ContactsPage_ShouldShowEmailAndPhone_ForUniversityInquiries" storage="c:\2_sdc\2026 hr s4 autotesting cs\dzmitry_karaliou_test_runners\web ui automation.xunit\bin\release\net9.0\web ui automation.xunit.dll" id="3f65d9be-4367-2583-fe41-7643dc8e9ba1">
+      <Execution id="43283f95-6afc-4fa6-a696-5f04c220f05a" />
+      <TestMethod codeBase="C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.xUnit\bin\Release\net9.0\Web UI Automation.xUnit.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WebUIAutomation.Tests.ContactPageTests" name="ContactsPage_ShouldShowEmailAndPhone_ForUniversityInquiries" />
+    </UnitTest>
+    <UnitTest name="WebUIAutomation.Tests.AboutPageNavigationTests.AboutPage_ShouldOpen_WhenUserClicksAboutTab" storage="c:\2_sdc\2026 hr s4 autotesting cs\dzmitry_karaliou_test_runners\web ui automation.xunit\bin\release\net9.0\web ui automation.xunit.dll" id="d845e996-6714-cfce-24b1-1bd4228fb760">
+      <Execution id="c86c5d56-b76b-421c-b6a7-4b5a942b3a79" />
+      <TestMethod codeBase="C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.xUnit\bin\Release\net9.0\Web UI Automation.xUnit.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="WebUIAutomation.Tests.AboutPageNavigationTests" name="AboutPage_ShouldOpen_WhenUserClicksAboutTab" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="600f7b5e-3d00-d3f8-13f7-8456d53c161e" executionId="faf74110-ae55-4fdd-a0c5-b3a0dbe6dadf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f65d9be-4367-2583-fe41-7643dc8e9ba1" executionId="43283f95-6afc-4fa6-a696-5f04c220f05a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1f8444fa-3cb1-692f-67e8-7feac9935886" executionId="6a3b474f-d205-4ec0-ade9-e11616321fb3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f360abe7-6f30-53dd-27d8-77813c2a43bf" executionId="166ad3b9-a184-440b-baab-1a23ae7e3542" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b5dd0cb5-8426-a138-8525-c0f48901d66d" executionId="ce280fd5-1634-4e3e-8be1-185312f34b3d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d845e996-6714-cfce-24b1-1bd4228fb760" executionId="c86c5d56-b76b-421c-b6a7-4b5a942b3a79" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Список результатов" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Все загруженные результаты" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="6" executed="6" passed="5" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 9.0.14)&#xD;
+[xUnit.net 00:00:00.38]   Discovering: Web UI Automation.xUnit&#xD;
+[xUnit.net 00:00:00.43]   Discovered:  Web UI Automation.xUnit&#xD;
+[xUnit.net 00:00:00.45]   Starting:    Web UI Automation.xUnit&#xD;
+[xUnit.net 00:00:55.41]       Assert.Contains() Failure: Sub-string not found&#xD;
+[xUnit.net 00:00:55.41]       String:    "European Humanities University"&#xD;
+[xUnit.net 00:00:55.41]       Not found: "EHU"&#xD;
+[xUnit.net 00:00:55.41]       Stack Trace:&#xD;
+[xUnit.net 00:00:55.41]         C:\2_SDC\2026 HR S4 AutoTesting CS\Dzmitry_Karaliou_Test_Runners\Web UI Automation.xUnit\HomePageTheoryTests.cs(50,0): at WebUIAutomation.Tests.HomePageTheoryTests.Page_ShouldLoad_AndTitleContains(String url, String titleFragment)&#xD;
+[xUnit.net 00:00:55.41]            at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+[xUnit.net 00:00:55.41]            at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)&#xD;
+[xUnit.net 00:01:18.67]   Finished:    Web UI Automation.xUnit&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="LAPTOP-DUOIV9LL" outcome="Error" timestamp="2026-04-03T21:32:21.4337384+03:00">
+        <Text>[xUnit.net 00:00:55.41]     WebUIAutomation.Tests.HomePageTheoryTests.Page_ShouldLoad_AndTitleContains(url: "https://en.ehu.lt/", titleFragment: "EHU") [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>
