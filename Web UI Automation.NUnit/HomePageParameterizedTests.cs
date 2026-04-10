@@ -1,6 +1,6 @@
 using System.Collections;
 using NUnit.Framework;
-using OpenQA.Selenium;
+using WebUIAutomation.Tests.Pages;
 
 namespace WebUIAutomation.Tests;
 
@@ -27,10 +27,8 @@ public class HomePageParameterizedTests : SeleniumTestBase
     public void Page_ShouldLoad_AndTitleContains(string url, string titleFragment)
     {
         Driver.Navigate().GoToUrl(url);
-
-        var loaded = WaitUntil(
-            () => Driver.Title.Length > 0 && Driver.FindElements(By.TagName("body")).Count > 0,
-            TimeSpan.FromSeconds(30));
+        var homePage = new HomePage(Driver);
+        var loaded = homePage.IsLoaded(TimeSpan.FromSeconds(30));
 
         Assert.That(loaded, Is.True, $"Страница не загрузилась: {url}");
         Assert.That(Driver.Title, Does.Contain(titleFragment).IgnoreCase);

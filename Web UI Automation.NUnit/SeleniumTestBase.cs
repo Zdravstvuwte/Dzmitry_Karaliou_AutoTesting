@@ -1,6 +1,5 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 
 namespace WebUIAutomation.Tests;
 
@@ -31,23 +30,13 @@ public abstract class SeleniumTestBase
     [SetUp]
     public void CreateDriverPerTest()
     {
-        var options = new ChromeOptions();
-        options.AddArgument("--start-maximized");
-        options.PageLoadStrategy = PageLoadStrategy.Eager;
-
-        var service = ChromeDriverService.CreateDefaultService();
-        Driver = new ChromeDriver(service, options, TimeSpan.FromMinutes(3));
-        Driver.Manage().Timeouts().ImplicitWait = ImplicitWait;
-        if (PageLoadTimeout is { } pageLoad)
-        {
-            Driver.Manage().Timeouts().PageLoad = pageLoad;
-        }
+        Driver = WebDriverSingleton.Instance.CreateDriver(ImplicitWait, PageLoadTimeout);
     }
 
     [TearDown]
     public void QuitDriver()
     {
-        Driver.Quit();
+        WebDriverSingleton.Instance.QuitAndDisposeDriver(Driver);
     }
 
     protected static bool WaitUntil(Func<bool> condition, TimeSpan timeout)

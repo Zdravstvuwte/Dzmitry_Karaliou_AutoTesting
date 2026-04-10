@@ -1,5 +1,5 @@
-using OpenQA.Selenium;
 using Xunit;
+using WebUIAutomation.Tests.Pages;
 
 namespace WebUIAutomation.Tests;
 
@@ -14,25 +14,12 @@ public class AboutPageNavigationTests : SeleniumTestBase, IClassFixture<TestSett
     [Fact]
     public void AboutPage_ShouldOpen_WhenUserClicksAboutTab()
     {
-        Driver.Navigate().GoToUrl(Settings.BaseUrl);
-
-        var aboutTab = Driver.FindElement(By.CssSelector("a[href*='/about']"));
-        try
-        {
-            aboutTab.Click();
-        }
-        catch (ElementClickInterceptedException)
-        {
-            ((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].click();", aboutTab);
-        }
-
-        var redirected = WaitUntil(() => Driver.Url.Contains("/about"), TimeSpan.FromSeconds(10));
+        var homePage = new HomePage(Driver).Open();
+        var aboutPage = homePage.OpenAbout();
+        var redirected = aboutPage.IsOpened(TimeSpan.FromSeconds(10));
         Assert.True(redirected, "Не дождались перехода на страницу About.");
         Assert.Contains("/about", Driver.Url);
-
-        var pageHeaderFound = WaitUntil(
-            () => Driver.FindElement(By.TagName("h1")).Text.Contains("About", StringComparison.OrdinalIgnoreCase),
-            TimeSpan.FromSeconds(10));
+        var pageHeaderFound = aboutPage.HasExpectedHeader(TimeSpan.FromSeconds(10));
 
         Assert.True(pageHeaderFound, "Заголовок страницы не содержит 'About'.");
     }

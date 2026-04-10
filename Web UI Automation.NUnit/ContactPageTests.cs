@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 using NUnit.Framework;
-using OpenQA.Selenium;
+using WebUIAutomation.Tests.Pages;
 
 namespace WebUIAutomation.Tests;
 
@@ -13,26 +13,14 @@ public class ContactPageTests : SeleniumTestBase
     [Test]
     public void ContactsPage_ShouldShowEmailAndPhone_ForUniversityInquiries()
     {
-        Driver.Navigate().GoToUrl("https://en.ehu.lt/contacts/");
-
-        var loaded = WaitUntil(
-            () => Driver.FindElements(By.TagName("body")).Count > 0
-                && Driver.FindElement(By.TagName("body")).Text.Length > 100,
-            TimeSpan.FromSeconds(25));
+        var contactsPage = new ContactsPage(Driver).Open();
+        var loaded = contactsPage.IsLoaded(TimeSpan.FromSeconds(25));
         Assert.That(loaded, Is.True, "Страница контактов не загрузилась.");
 
         Assert.That(Driver.Url, Does.Contain("/contacts").IgnoreCase);
-
-        var headingOk = WaitUntil(
-            () =>
-            {
-                var h1 = Driver.FindElements(By.CssSelector("h1.subheader__title, h1"));
-                return h1.Count > 0 && h1[0].Text.Contains("Contact", StringComparison.OrdinalIgnoreCase);
-            },
-            TimeSpan.FromSeconds(15));
+        var headingOk = contactsPage.HasContactHeader(TimeSpan.FromSeconds(15));
         Assert.That(headingOk, Is.True, "Ожидался заголовок страницы с «Contact».");
-
-        var body = Driver.FindElement(By.TagName("body")).Text;
+        var body = contactsPage.BodyText();
 
         Assert.That(body, Does.Contain("office@ehu.lt"));
         Assert.That(body, Does.Contain("consult@ehu.lt").Or.Contains("recruitment@ehu.lt"));

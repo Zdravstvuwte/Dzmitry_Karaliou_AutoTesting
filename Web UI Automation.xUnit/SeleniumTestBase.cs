@@ -1,5 +1,4 @@
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 
 namespace WebUIAutomation.Tests;
 
@@ -13,24 +12,14 @@ public abstract class SeleniumTestBase : IDisposable
     protected SeleniumTestBase(TestSettings settings)
     {
         Settings = settings;
-        var options = new ChromeOptions();
-        options.AddArgument("--start-maximized");
-        options.PageLoadStrategy = PageLoadStrategy.Eager;
-
-        var service = ChromeDriverService.CreateDefaultService();
-        Driver = new ChromeDriver(service, options, TimeSpan.FromMinutes(3));
-        Driver.Manage().Timeouts().ImplicitWait = settings.DefaultImplicitWait;
-        if (settings.DefaultPageLoad is { } pageLoad)
-        {
-            Driver.Manage().Timeouts().PageLoad = pageLoad;
-        }
+        Driver = WebDriverSingleton.Instance.CreateDriver(settings.DefaultImplicitWait, settings.DefaultPageLoad);
     }
 
     protected TestSettings Settings { get; }
 
     public void Dispose()
     {
-        Driver.Quit();
+        WebDriverSingleton.Instance.QuitAndDisposeDriver(Driver);
         GC.SuppressFinalize(this);
     }
 

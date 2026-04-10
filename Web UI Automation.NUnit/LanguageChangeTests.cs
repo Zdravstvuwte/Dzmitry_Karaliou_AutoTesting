@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
+using WebUIAutomation.Tests.Pages;
 
 namespace WebUIAutomation.Tests;
 
@@ -12,30 +13,10 @@ public class LanguageChangeTests : SeleniumTestBase
     [Test]
     public void Site_ShouldSwitchToLithuanian_WhenUserSelectsLtInLanguageSwitcher()
     {
-        Driver.Navigate().GoToUrl("https://en.ehu.lt/");
-
-        var switcherRoot = WaitUntil(
-            () => Driver.FindElements(By.CssSelector("ul.language-switcher")).Count > 0,
-            TimeSpan.FromSeconds(20));
+        var homePage = new HomePage(Driver).Open();
+        var switcherRoot = homePage.IsLanguageSwitcherVisible(TimeSpan.FromSeconds(20));
         Assert.That(switcherRoot, Is.True, "Переключатель языка не найден.");
-
-        var ltLink = WaitUntilElement(
-            () =>
-            {
-                try
-                {
-                    return Driver.FindElement(
-                        By.CssSelector("ul.language-switcher a[href*='lt.ehuniversity'], ul.language-switcher a[href*='lt.ehu']"));
-                }
-                catch
-                {
-                    return null;
-                }
-            },
-            TimeSpan.FromSeconds(10));
-
-        Assert.That(ltLink, Is.Not.Null, "Ссылка на литовскую версию не найдена в переключателе языка.");
-        ((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].click();", ltLink);
+        homePage.SwitchToLithuanian();
 
         var switched = WaitUntil(
             () =>

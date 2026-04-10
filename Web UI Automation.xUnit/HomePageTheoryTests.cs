@@ -1,5 +1,5 @@
-using OpenQA.Selenium;
 using Xunit;
+using WebUIAutomation.Tests.Pages;
 
 namespace WebUIAutomation.Tests;
 
@@ -27,9 +27,8 @@ public class HomePageTheoryTests : SeleniumTestBase, IClassFixture<TestSettings>
     public void Home_ShouldHaveTitleContaining(string url, string titleFragment)
     {
         Driver.Navigate().GoToUrl(url);
-        var loaded = WaitUntil(
-            () => Driver.Title.Length > 0 && Driver.FindElements(By.TagName("body")).Count > 0,
-            TimeSpan.FromSeconds(30));
+        var homePage = new HomePage(Driver);
+        var loaded = homePage.IsLoaded(TimeSpan.FromSeconds(30));
         Assert.True(loaded);
         Assert.Contains(titleFragment, Driver.Title, StringComparison.OrdinalIgnoreCase);
     }
@@ -41,10 +40,8 @@ public class HomePageTheoryTests : SeleniumTestBase, IClassFixture<TestSettings>
     public void Page_ShouldLoad_AndTitleContains(string url, string titleFragment)
     {
         Driver.Navigate().GoToUrl(url);
-
-        var loaded = WaitUntil(
-            () => Driver.Title.Length > 0 && Driver.FindElements(By.TagName("body")).Count > 0,
-            TimeSpan.FromSeconds(30));
+        var homePage = new HomePage(Driver);
+        var loaded = homePage.IsLoaded(TimeSpan.FromSeconds(30));
 
         Assert.True(loaded, $"Страница не загрузилась: {url}");
         Assert.Contains(titleFragment, Driver.Title, StringComparison.OrdinalIgnoreCase);
