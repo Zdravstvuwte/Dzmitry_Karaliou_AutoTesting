@@ -1,0 +1,30 @@
+2026-05-07 18:01:48.569 +03:00 [INF] Test suite started at "2026-05-07T15:01:48.5693352Z"
+2026-05-07 18:01:48.599 +03:00 [INF] Starting test: WebUIAutomation.Tests.AboutPageNavigationTests.AboutPage_ShouldOpen_WhenUserClicksAboutTab
+2026-05-07 18:01:48.599 +03:00 [INF] Starting test: WebUIAutomation.Tests.LanguageChangeTests.Site_ShouldSwitchToLithuanian_WhenUserSelectsLtInLanguageSwitcher
+2026-05-07 18:01:48.599 +03:00 [INF] Starting test: WebUIAutomation.Tests.HomePageParameterizedTests.Page_ShouldLoad_AndTitleContains(home, title-fragment)
+2026-05-07 18:01:48.599 +03:00 [INF] Starting test: WebUIAutomation.Tests.ContactPageTests.ContactsPage_ShouldShowEmailAndPhone_ForUniversityInquiries
+2026-05-07 18:01:52.026 +03:00 [DBG] WebDriver created with implicit wait 10s and page load timeout nulls
+2026-05-07 18:01:52.053 +03:00 [DBG] WebDriver created with implicit wait 10s and page load timeout 60s
+2026-05-07 18:01:52.117 +03:00 [DBG] WebDriver created with implicit wait 10s and page load timeout 60s
+2026-05-07 18:01:52.154 +03:00 [DBG] WebDriver created with implicit wait 10s and page load timeout nulls
+2026-05-07 18:01:54.443 +03:00 [INF] Test passed: WebUIAutomation.Tests.ContactPageTests.ContactsPage_ShouldShowEmailAndPhone_ForUniversityInquiries
+2026-05-07 18:01:59.691 +03:00 [INF] Test passed: WebUIAutomation.Tests.HomePageParameterizedTests.Page_ShouldLoad_AndTitleContains(home, title-fragment)
+2026-05-07 18:02:01.709 +03:00 [INF] Test passed: WebUIAutomation.Tests.AboutPageNavigationTests.AboutPage_ShouldOpen_WhenUserClicksAboutTab
+2026-05-07 18:02:01.753 +03:00 [DBG] WebDriver disposed for test: WebUIAutomation.Tests.ContactPageTests.ContactsPage_ShouldShowEmailAndPhone_ForUniversityInquiries
+2026-05-07 18:02:01.760 +03:00 [INF] Starting test: WebUIAutomation.Tests.SearchFunctionalityTests.Search_ShouldReturnResults_WhenSearchTermIsValid
+2026-05-07 18:02:02.676 +03:00 [DBG] WebDriver disposed for test: WebUIAutomation.Tests.HomePageParameterizedTests.Page_ShouldLoad_AndTitleContains(home, title-fragment)
+2026-05-07 18:02:02.676 +03:00 [INF] Starting test: WebUIAutomation.Tests.HomePageParameterizedTests.Page_ShouldLoad_AndTitleContains(about, title-fragment)
+2026-05-07 18:02:02.869 +03:00 [DBG] WebDriver disposed for test: WebUIAutomation.Tests.AboutPageNavigationTests.AboutPage_ShouldOpen_WhenUserClicksAboutTab
+2026-05-07 18:02:03.167 +03:00 [INF] Test passed: WebUIAutomation.Tests.LanguageChangeTests.Site_ShouldSwitchToLithuanian_WhenUserSelectsLtInLanguageSwitcher
+2026-05-07 18:02:03.913 +03:00 [DBG] WebDriver created with implicit wait 5s and page load timeout nulls
+2026-05-07 18:02:04.716 +03:00 [DBG] WebDriver created with implicit wait 10s and page load timeout nulls
+2026-05-07 18:02:05.292 +03:00 [DBG] WebDriver disposed for test: WebUIAutomation.Tests.LanguageChangeTests.Site_ShouldSwitchToLithuanian_WhenUserSelectsLtInLanguageSwitcher
+2026-05-07 18:02:07.502 +03:00 [INF] Test passed: WebUIAutomation.Tests.HomePageParameterizedTests.Page_ShouldLoad_AndTitleContains(about, title-fragment)
+2026-05-07 18:02:08.098 +03:00 [DBG] WebDriver disposed for test: WebUIAutomation.Tests.HomePageParameterizedTests.Page_ShouldLoad_AndTitleContains(about, title-fragment)
+2026-05-07 18:02:08.098 +03:00 [INF] Starting test: WebUIAutomation.Tests.HomePageParameterizedTests.Page_ShouldLoad_AndTitleContains(contacts, title-fragment)
+2026-05-07 18:02:09.058 +03:00 [INF] Test passed: WebUIAutomation.Tests.SearchFunctionalityTests.Search_ShouldReturnResults_WhenSearchTermIsValid
+2026-05-07 18:02:09.644 +03:00 [DBG] WebDriver created with implicit wait 10s and page load timeout nulls
+2026-05-07 18:02:09.868 +03:00 [DBG] WebDriver disposed for test: WebUIAutomation.Tests.SearchFunctionalityTests.Search_ShouldReturnResults_WhenSearchTermIsValid
+2026-05-07 18:02:11.056 +03:00 [INF] Test passed: WebUIAutomation.Tests.HomePageParameterizedTests.Page_ShouldLoad_AndTitleContains(contacts, title-fragment)
+2026-05-07 18:02:11.270 +03:00 [DBG] WebDriver disposed for test: WebUIAutomation.Tests.HomePageParameterizedTests.Page_ShouldLoad_AndTitleContains(contacts, title-fragment)
+2026-05-07 18:02:11.271 +03:00 [INF] Test suite finished successfully. Total tests: 7

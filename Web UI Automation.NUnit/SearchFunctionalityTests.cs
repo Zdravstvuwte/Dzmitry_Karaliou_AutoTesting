@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using Shouldly;
 using WebUIAutomation.Tests.Pages;
 
 namespace WebUIAutomation.Tests;
@@ -19,9 +20,9 @@ public class SearchFunctionalityTests : SeleniumTestBase
         var resultsPage = homePage.Search(searchTerm);
         var redirectedToSearch = resultsPage.HasQueryInUrl(searchTerm, TimeSpan.FromSeconds(25));
 
-        Assert.That(redirectedToSearch, Is.True, "После отправки поиска URL не содержит запрос study programs.");
+        redirectedToSearch.ShouldBeTrue("После отправки поиска URL не содержит запрос study programs.");
         var hasSearchResultsContext = resultsPage.ShowsResultsContext(TimeSpan.FromSeconds(20));
 
-        Assert.That(hasSearchResultsContext, Is.True, "Страница результатов поиска не отобразилась.");
+        hasSearchResultsContext.ShouldBeTrue("Страница результатов поиска не отобразилась.");
     }
 }

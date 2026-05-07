@@ -1,5 +1,6 @@
 using System.Collections;
 using NUnit.Framework;
+using Shouldly;
 using WebUIAutomation.Tests.Pages;
 
 namespace WebUIAutomation.Tests;
@@ -30,7 +31,7 @@ public class HomePageParameterizedTests : SeleniumTestBase
         var homePage = new HomePage(Driver);
         var loaded = homePage.IsLoaded(TimeSpan.FromSeconds(30));
 
-        Assert.That(loaded, Is.True, $"Страница не загрузилась: {url}");
-        Assert.That(Driver.Title, Does.Contain(titleFragment).IgnoreCase);
+        loaded.ShouldBeTrue($"Страница не загрузилась: {url}");
+        Driver.Title.ToLowerInvariant().ShouldContain(titleFragment.ToLowerInvariant());
     }
 }

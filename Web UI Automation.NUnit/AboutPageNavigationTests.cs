@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using Shouldly;
 using WebUIAutomation.Tests.Pages;
 
 namespace WebUIAutomation.Tests;
@@ -13,10 +14,10 @@ public class AboutPageNavigationTests : SeleniumTestBase
         var homePage = new HomePage(Driver).Open();
         var aboutPage = homePage.OpenAbout();
         var redirected = aboutPage.IsOpened(TimeSpan.FromSeconds(10));
-        Assert.That(redirected, Is.True, "Не дождались перехода на страницу About.");
-        Assert.That(Driver.Url, Does.Contain("/about"));
+        redirected.ShouldBeTrue("Не дождались перехода на страницу About.");
+        Driver.Url.ShouldContain("/about");
         var pageHeaderFound = aboutPage.HasExpectedHeader(TimeSpan.FromSeconds(10));
 
-        Assert.That(pageHeaderFound, Is.True, "Заголовок страницы не содержит 'About'.");
+        pageHeaderFound.ShouldBeTrue("Заголовок страницы не содержит 'About'.");
     }
 }

@@ -1,0 +1,68 @@
+{
+  "generatedAtUtc": "2026-05-07T14:38:35.7096192Z",
+  "tests": [
+    {
+      "TestName": "WebUIAutomation.Tests.AboutPageNavigationTests.AboutPage_ShouldOpen_WhenUserClicksAboutTab",
+      "Status": "Passed",
+      "DurationMs": 14384.1175,
+      "StartedAtUtc": "2026-05-07T14:38:11.5368578+00:00",
+      "FinishedAtUtc": "2026-05-07T14:38:25.9209753+00:00",
+      "ErrorMessage": null,
+      "ScreenshotPath": null
+    },
+    {
+      "TestName": "WebUIAutomation.Tests.ContactPageTests.ContactsPage_ShouldShowEmailAndPhone_ForUniversityInquiries",
+      "Status": "Passed",
+      "DurationMs": 6075.3638,
+      "StartedAtUtc": "2026-05-07T14:38:11.5368729+00:00",
+      "FinishedAtUtc": "2026-05-07T14:38:17.6122367+00:00",
+      "ErrorMessage": null,
+      "ScreenshotPath": null
+    },
+    {
+      "TestName": "WebUIAutomation.Tests.HomePageParameterizedTests.Page_ShouldLoad_AndTitleContains(about, title-fragment)",
+      "Status": "Passed",
+      "DurationMs": 3191.2297,
+      "StartedAtUtc": "2026-05-07T14:38:27.1999282+00:00",
+      "FinishedAtUtc": "2026-05-07T14:38:30.3911579+00:00",
+      "ErrorMessage": null,
+      "ScreenshotPath": null
+    },
+    {
+      "TestName": "WebUIAutomation.Tests.HomePageParameterizedTests.Page_ShouldLoad_AndTitleContains(contacts, title-fragment)",
+      "Status": "Passed",
+      "DurationMs": 4843.873,
+      "StartedAtUtc": "2026-05-07T14:38:30.6609713+00:00",
+      "FinishedAtUtc": "2026-05-07T14:38:35.5048443+00:00",
+      "ErrorMessage": null,
+      "ScreenshotPath": null
+    },
+    {
+      "TestName": "WebUIAutomation.Tests.HomePageParameterizedTests.Page_ShouldLoad_AndTitleContains(home, title-fragment)",
+      "Status": "Passed",
+      "DurationMs": 10010.1754,
+      "StartedAtUtc": "2026-05-07T14:38:11.536861+00:00",
+      "FinishedAtUtc": "2026-05-07T14:38:21.5470364+00:00",
+      "ErrorMessage": null,
+      "ScreenshotPath": null
+    },
+    {
+      "TestName": "WebUIAutomation.Tests.LanguageChangeTests.Site_ShouldSwitchToLithuanian_WhenUserSelectsLtInLanguageSwitcher",
+      "Status": "Passed",
+      "DurationMs": 14479.1417,
+      "StartedAtUtc": "2026-05-07T14:38:11.536865+00:00",
+      "FinishedAtUtc": "2026-05-07T14:38:26.0160067+00:00",
+      "ErrorMessage": null,
+      "ScreenshotPath": null
+    },
+    {
+      "TestName": "WebUIAutomation.Tests.SearchFunctionalityTests.Search_ShouldReturnResults_WhenSearchTermIsValid",
+      "Status": "Passed",
+      "DurationMs": 7908.0942,
+      "StartedAtUtc": "2026-05-07T14:38:27.1106761+00:00",
+      "FinishedAtUtc": "2026-05-07T14:38:35.0187703+00:00",
+      "ErrorMessage": null,
+      "ScreenshotPath": null
+    }
+  ]
+}

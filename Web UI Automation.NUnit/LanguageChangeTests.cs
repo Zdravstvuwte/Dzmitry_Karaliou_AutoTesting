@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
+using Shouldly;
 using WebUIAutomation.Tests.Pages;
 
 namespace WebUIAutomation.Tests;
@@ -15,7 +16,7 @@ public class LanguageChangeTests : SeleniumTestBase
     {
         var homePage = new HomePage(Driver).Open();
         var switcherRoot = homePage.IsLanguageSwitcherVisible(TimeSpan.FromSeconds(20));
-        Assert.That(switcherRoot, Is.True, "Переключатель языка не найден.");
+        switcherRoot.ShouldBeTrue("Переключатель языка не найден.");
         homePage.SwitchToLithuanian();
 
         var switched = WaitUntil(
@@ -27,7 +28,7 @@ public class LanguageChangeTests : SeleniumTestBase
             },
             TimeSpan.FromSeconds(25));
 
-        Assert.That(switched, Is.True, "Не дождались перехода на литовскую версию сайта.");
+        switched.ShouldBeTrue("Не дождались перехода на литовскую версию сайта.");
 
         var langLt = WaitUntil(
             () =>
@@ -38,9 +39,7 @@ public class LanguageChangeTests : SeleniumTestBase
             },
             TimeSpan.FromSeconds(15));
 
-        Assert.That(langLt, Is.True, "Атрибут lang у <html> не указывает на литовский язык.");
-        Assert.That(
-            Driver.FindElement(By.TagName("html")).GetAttribute("lang"),
-            Does.StartWith("lt").IgnoreCase);
+        langLt.ShouldBeTrue("Атрибут lang у <html> не указывает на литовский язык.");
+        Driver.FindElement(By.TagName("html")).GetAttribute("lang")?.ToLowerInvariant().ShouldStartWith("lt");
     }
 }
